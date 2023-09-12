@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- https://miran-bel.github.io/bus/ -->
 <head>
     <meta charset="UTF-8">
     <title>Расписание автобусов Миран</title>
@@ -39,6 +40,10 @@
             background-color: #EAD1DC;
         }
 
+        .bold-text {
+            font-weight: bold;
+        }
+
         /* Медиазапрос для мобильных устройств */
         @media (max-width: 768px) {
             .table-container {
@@ -54,138 +59,281 @@
     <div class="table-container">
         <!-- Первая таблица -->
         <table class="table">
-            <tr>
+            <!-- <tr>
                 <th colspan="2" style="text-align: center; background-color: #B7D7A9;" >Малиновка (станция метро) → Великий камень</th>
-            </tr>
+            </tr> -->
             <tr>
                 <th>Маршрут 1 <span style="float: right;">1 смена</span></th>
                 <th style="text-align: center;">Время</th>
             </tr>
             <tr>
+                <td class="green">1. ст.м. Кунцевщина</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">2. ст.м. Спортивная</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">3.Одоевского</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">4.Пономаренко</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">5.Уманская (ст.м. Михалово)</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">6. ст.м. Институт культуры</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">7.Могилевская (станция метро)</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">8. пос.Сокол</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">9. Прибытие в Великий камень.</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="red">9. Отправление из Великого камня.</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="red">8. пос.Сокол</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td class="red">7.Могилевская (станция метро)</td>
+                <td class="bold-text">6:30:00</td>               
+            </tr>
+            <tr>
+                <td><p></p></td>
+                <td><p></p></td>               
+            </tr>
+            <tr>
+                <td><p></p></td>
+                <td><p></p></td>               
+            </tr>
+            <tr>
+                <td><p></p></td>
+                <td><p></p></td>               
+            </tr>
+        </table>
+
+        <!-- Вторая таблица -->
+        <table class="table">
+            <!-- <tr>
+                <th colspan="2" style="text-align: center; background-color: #EAD1DC;"> Великий камень → Малиновка (станция метро)</th>
+            </tr> -->
+            <tr>
+                <th>Маршрут 1 <span style="float: right;">2 смена</span></th>
+                <th style="text-align: center;">Время</th>
+            </tr>
+            <tr>
                 <td class="green">1.Малиновка (станция метро)</td>
-                <td>6:40:00</td>               
+                <td class="bold-text">19:10:00</td>               
+            </tr>
+            <tr>
+                <td class="green">2. пос.Сокол</td>
+                <td class="bold-text">19:30:00</td>               
+            </tr>
+            <tr>
+                <td class="green">3. Прибытие в Великий камень.</td>
+                <td class="bold-text">19:40:00</td>               
+            </tr>
+            <tr>
+                <td class="red">1. Отправление из Великого камня.</td>
+                <td class="bold-text">20:20:00</td>               
+            </tr>
+            <tr>
+                <td class="red">2. пос.Сокол</td>
+                <td class="bold-text">20:30:00</td>               
+            </tr>
+            <tr>
+                <td class="red">1.Могилевская (станция метро)</td>
+                <td class="bold-text">20:50:00</td>               
+            </tr>
+            <tr>
+                <td>Маршрут 1А</td>
+                <td></td>               
+            </tr>
+            <tr>
+                <td class="red">1. Отправление из Великого камня.</td>
+                <td class="bold-text">16:40:00</td>               
+            </tr>
+            <tr>
+                <td class="red">2.Могилевская (станция метро)</td>
+                <td class="bold-text">17:10:00</td>               
+            </tr>
+            <tr>
+                <td class="red">3. ст.м. Институт культуры</td>
+                <td class="bold-text">17:30:00</td>               
+            </tr>
+            <tr>
+                <td class="red">4.Уманская (ст.м. Михалово)</td>
+                <td class="bold-text">17:45:00</td>               
+            </tr>
+            <tr>
+                <td class="red">5.Пономаренко</td>
+                <td class="bold-text">17:50:00</td>               
+            </tr>
+            <tr>
+                <td class="red">6.Одоевского</td>
+                <td class="bold-text">17:53:00</td>               
+            </tr>
+            <tr>
+                <td class="red">7. ст.м. Спортивная</td>
+                <td class="bold-text">17:55:00</td>               
+            </tr>
+            <tr>
+                <td class="red">8. ст.м. Кунцевщина</td>
+                <td class="bold-text">18:00:00</td>               
+            </tr>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <!-- Первая таблица -->
+        <table class="table">
+            <tr>
+                <th colspan="2" style="text-align: center; background-color: #B7D7A9;" >Малиновка (станция метро) → Великий камень</th>
+            </tr>
+            <tr>
+                <th>Маршрут 2 <span style="float: right;">1 смена</span></th>
+                <th style="text-align: center;">Время</th>
+            </tr>
+            <tr>
+                <td class="green">1.Малиновка (станция метро)</td>
+                <td class="bold-text">6:40:00</td>               
             </tr>
             <tr>
                 <td class="green">2.Слуцкий гостинец (АвтоВаз)</td>
-                <td>6:55:00</td>
+                <td class="bold-text">6:55:00</td>
             </tr>
             <tr>
                 <td class="green">3.Сеница.</td>
-                <td>6:57:00</td>
+                <td class="bold-text">6:57:00</td>
             </tr>
             <tr>
                 <td class="green">4.Щитомиричи.</td>
-                <td>7:00:00</td>
+                <td class="bold-text">7:00:00</td>
             </tr>
             <tr>
                 <td class="green">5.Урожайная.</td>
-                <td>7:03:00</td>
+                <td class="bold-text">7:03:00</td>
             </tr>
             <tr>
                 <td class="green">6.Самохваловичи ( Центральная площадь)</td>
-                <td>7:10:00</td>
+                <td class="bold-text">7:10:00</td>
             </tr>
             <tr>
                 <td class="green">7. Прибытие в Великий камень.</td>
-                <td>7:40:00</td>
+                <td class="bold-text">7:40:00</td>
             </tr>
             <tr>
-                <td>7. Отправление из Великого камня.</td>
-                <td>8:20:00</td>
+                <td class="red">7. Отправление из Великого камня.</td>
+                <td class="bold-text">8:20:00</td>
             </tr>
             <tr>
-                <td>6.Самохваловичи ( Центральная площадь)</td>
-                <td>8:50:00</td>
+                <td class="red">6.Самохваловичи ( Центральная площадь)</td>
+                <td class="bold-text">8:50:00</td>
             </tr>
             <tr>
-                <td>5.Урожайная.</td>
-                <td>8:57:00</td>
+                <td class="red">5.Урожайная.</td>
+                <td class="bold-text">8:57:00</td>
             </tr>
             <tr>
-                <td>4.Щитомиричи.</td>
-                <td>9:00:00</td>
+                <td class="red">4.Щитомиричи.</td>
+                <td class="bold-text">9:00:00</td>
             </tr>
             <tr>
-                <td>3.Сеница.</td>
-                <td>9:03:00</td>
+                <td class="red">3.Сеница.</td>
+                <td class="bold-text">9:03:00</td>
             </tr>
             <tr>
-                <td>2.Слуцкий гостинец (АвтоВаз)</td>
-                <td>9:05:00</td>
+                <td class="red">2.Слуцкий гостинец (АвтоВаз)</td>
+                <td class="bold-text">9:05:00</td>
             </tr>
             <tr>
-                <td>1.Малиновка (станция метро)</td>
-                <td>9:20:00</td>
+                <td class="red">1.Малиновка (станция метро)</td>
+                <td class="bold-text">9:20:00</td>
             </tr>
         </table>
 
         <!-- Вторая таблица -->
         <table class="table">
             <tr>
-                <th colspan="2" style="text-align: center;"> Великий камень → Малиновка (станция метро)</th>
+                <th colspan="2" style="text-align: center; background-color: #EAD1DC;"> Великий камень → Малиновка (станция метро)</th>
             </tr>
             <tr>
-                <th>Маршрут 1 <span style="float: right;">2 смена</span></th>
+                <th>Маршрут 2 <span style="float: right;">2 смена</span></th>
                 <th style="text-align: center;">Время</th>
             </tr>
             <tr>
-                <td>1.Малиновка (станция метро)</td>
-                <td>18:40:00</td>               
+                <td class="green">1.Малиновка (станция метро)</td>
+                <td class="bold-text">18:40:00</td>               
             </tr>
             <tr>
-                <td>2.Слуцкий гостинец (АвтоВаз)</td>
-                <td>18:55:00</td>
+                <td class="green">2.Слуцкий гостинец (АвтоВаз)</td>
+                <td class="bold-text">18:55:00</td>
             </tr>
             <tr>
-                <td>3.Сеница.</td>
-                <td>18:57:00</td>
+                <td class="green">3.Сеница.</td>
+                <td class="bold-text">18:57:00</td>
             </tr>
             <tr>
-                <td>4.Щитомиричи.</td>
-                <td>19:00:00</td>
+                <td class="green">4.Щитомиричи.</td>
+                <td class="bold-text">19:00:00</td>
             </tr>
             <tr>
-                <td>5.Урожайная.</td>
-                <td>19:03:00</td>
+                <td class="green">5.Урожайная.</td>
+                <td class="bold-text">19:03:00</td>
             </tr>
             <tr>
-                <td>6.Самохваловичи ( Центральная площадь)</td>
-                <td>19:10:00</td>
+                <td class="green">6.Самохваловичи ( Центральная площадь)</td>
+                <td class="bold-text">19:10:00</td>
             </tr>
             <tr>
-                <td>7. Прибытие в Великий камень.</td>
-                <td>19:40:00</td>
+                <td class="green">7. Прибытие в Великий камень.</td>
+                <td class="bold-text">19:40:00</td>
             </tr>
             <tr>
-                <td>7. Отправление из Великого камня.</td>
-                <td>20:20:00</td>
+                <td class="red">7. Отправление из Великого камня.</td>
+                <td class="bold-text">20:20:00</td>
             </tr>
             <tr>
-                <td>6.Самохваловичи ( Центральная площадь)</td>
-                <td>20:50:00</td>
+                <td class="red">6.Самохваловичи ( Центральная площадь)</td>
+                <td class="bold-text">20:50:00</td>
             </tr>
             <tr>
-                <td>5.Урожайная.</td>
-                <td>20:57:00</td>
+                <td class="red">5.Урожайная.</td>
+                <td class="bold-text">20:57:00</td>
             </tr>
             <tr>
-                <td>4.Щитомиричи.</td>
-                <td>21:00:00</td>
+                <td class="red">4.Щитомиричи.</td>
+                <td class="bold-text">21:00:00</td>
             </tr>
             <tr>
-                <td>3.Сеница.</td>
-                <td>21:03:00</td>
+                <td class="red">3.Сеница.</td>
+                <td class="bold-text">21:03:00</td>
             </tr>
             <tr>
-                <td>2.Слуцкий гостинец (АвтоВаз)</td>
-                <td>21:05:00</td>
+                <td class="red">2.Слуцкий гостинец (АвтоВаз)</td>
+                <td class="bold-text">21:05:00</td>
             </tr>
             <tr>
-                <td>1.Малиновка (станция метро)</td>
-                <td>21:20:00</td>
+                <td class="red">1.Малиновка (станция метро)</td>
+                <td class="bold-text">21:20:00</td>
             </tr>
         </table>
     </div>
-
 </body>
 </html>
