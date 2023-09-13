@@ -60,6 +60,25 @@
             width: 120px;
         }
 
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Выравниваем по верхнему краю */
+            height: 22vh;
+            margin: 0;
+        }
+
+        /* Стили для изображения */
+        .container img {
+            max-width: 200px;
+        }
+
+        /* Стили для текста */
+        .container h1 {
+            margin-left: 10px; /* Добавляем небольшой отступ между изображением и текстом */
+            margin-top: 38px;
+        }
+
         /* Медиазапрос для мобильных устройств */
         @media (max-width: 768px) {
             .table-container {
@@ -69,11 +88,9 @@
     </style>
 </head>
 <body>
-    <div style="text-align: center;">
-        <h1>
-            <img src="images/icon.png" alt="Логотип" style="float: inline-start; margin-right: 10px; max-width: 100px;">
-            <span style="display: inline-block; text-align: center;">График движения транспорта</span>
-        </h1>
+    <div class="container">
+        <img src="images/icon.png" alt="Логотип">
+        <span><h1>График движения транспорта</h1></span>
     </div>
 
     <div class="table-container">
