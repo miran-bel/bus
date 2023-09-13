@@ -21,6 +21,7 @@
             margin: 10px;
             border-collapse: collapse;
             width: 100%;
+            /* table-layout: auto;  Фиксированная ширина таблицы */
         }
 
         .table th, .table td {
@@ -49,6 +50,16 @@
             font-size: larger;
         }
 
+        .table-separate_red {
+            width: 100%;
+            height: 6px;
+            background-color: red;
+        }
+
+        .table td:nth-child(2) {
+            width: 120px;
+        }
+
         /* Медиазапрос для мобильных устройств */
         @media (max-width: 768px) {
             .table-container {
@@ -59,7 +70,10 @@
 </head>
 <body>
     <div style="text-align: center;">
-        <h1>График движения автобуса на Великий камень</h1>
+        <h1>
+            <img src="images/icon.png" alt="Логотип" style="float: inline-start; margin-right: 10px; max-width: 100px;">
+            <span style="display: inline-block; text-align: center;">График движения транспорта</span>
+        </h1>
     </div>
 
     <div class="table-container">
@@ -137,7 +151,7 @@
                 <td><p></p></td>               
             </tr>
         </table>
-
+        <!-- Маршрут 1 -->
         <!-- Вторая таблица -->
         <table class="table">
             <tr>
@@ -219,9 +233,9 @@
         </table>
     </div>
 
-    <table class="table">
+    <table class="table-separate_red">
         <tr>
-            <th colspan="1" style="text-align: center; background-color: red;" ></th>
+            <th></th>
         </tr>
     </table>
 
@@ -294,6 +308,7 @@
             </tr>
         </table>
 
+        <!-- Маршрут 2 -->
         <!-- Вторая таблица -->
         <table class="table">
             <tr>
@@ -362,7 +377,7 @@
         </table>
     </div>
 
-    <table class="table">
+    <table class="table-separate_red">
         <tr>
             <th colspan="1" style="text-align: center; background-color: red;" ></th>
         </tr>
@@ -488,7 +503,7 @@
         </table>
     </div>
 
-    <table class="table">
+    <table class="table-separate_red">
         <tr>
             <th colspan="1" style="text-align: center; background-color: red;" ></th>
         </tr>
@@ -726,7 +741,7 @@
         </table>
     </div>
 
-    <table class="table">
+    <table class="table-separate_red">
         <tr>
             <th colspan="1" style="text-align: center; background-color: red;" ></th>
         </tr>
@@ -788,7 +803,7 @@
         </table>
     </div>
 
-    <table class="table">
+    <table class="table-separate_red">
         <tr>
             <th colspan="1" style="text-align: center; background-color: red;" ></th>
         </tr>
@@ -850,7 +865,7 @@
         </table>
     </div>
 
-    <table class="table">
+    <table class="table-separate_red">
         <tr>
             <th colspan="1" style="text-align: center; background-color: red;" ></th>
         </tr>
