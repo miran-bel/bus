@@ -33,6 +33,7 @@
 
         .table th {
             background-color: #f2f2f2;
+            height: 30px;
         }
 
         .green {
@@ -61,6 +62,10 @@
             width: 120px;
         }
 
+        .table tr th {
+            border: solid black 2px;
+        }
+
         /* Медиазапрос для мобильных устройств */
         @media (max-width: 550px) {
             .table-container {
@@ -81,19 +86,21 @@
 
     <table style="display: flex; flex-wrap: wrap; margin-left: 10px;">
         <tr>
-            <td style="background-color: #B7D7A9; width: 60px; border: solid 2px black;"></td><td style="padding-left: 15px;"> - &nbsp;&nbsp;движение в Великий камень</td>
+            <td style="background-color: #B7D7A9; width: 60px; border: solid 2px black;"></td><td style="padding-left: 15px;"> - &nbsp;&nbsp;<b>движение &nbsp;в &nbsp;Великий камень</b></td>
         </tr>
+        
         <tr>
-            <td style="background-color: #EAD1DC; width: 60px;border: solid 2px black"></td><td style="padding-left: 15px;"> - &nbsp;&nbsp;движение из Великий камень</td>
+            <td style="background-color: #EAD1DC; width: 60px;border: solid 2px black"></td><td style="padding-left: 15px;"> - &nbsp;&nbsp;<b>движение из Великий камень</b></td>
         </tr>
     </table>
+
     <div class="table-container">
         <!-- Маршрут 1 -->
         <!-- Первая таблица -->
         
-        <table class="table">
+        <table class="table ">
             <tr>
-                <th colspan="2" style="text-align: center;">ст. м. Кунцевщина → Великий камень → ст. м. Могилевская</th>
+                <th colspan="2" style="text-align: center; ">ст. м. Кунцевщина → Великий камень → ст. м. Могилевская</th>
             </tr>
             <tr>
                 <th>Маршрут 1 <span style="float: right;">1 смена</span></th>
@@ -167,7 +174,7 @@
                 <th colspan="2" style="text-align: center;">ст. м. Могилевская → Великий камень → ст. м. Могилевская</th>
             </tr>
             <tr>
-                <th>Маршрут 1 <span style="float: right;">2 смена</span></th>
+                <th>Маршрут 1 <span style="float: right; ">2 смена</span></th>
                 <th style="text-align: center;">Время</th>
             </tr>
             <tr>
@@ -194,9 +201,9 @@
                 <td class="red">1. ст. м. Могилевская</td>
                 <td class="bold-text">20:50</td>               
             </tr>
-            <tr>
+            <!-- <tr>
                 <td></td>
-            </tr>
+            </tr> -->
             <tr>
                 <th colspan="2" style="text-align: center;">Великий камень → ст. м. Кунцевщина</th>
             </tr>
@@ -250,11 +257,11 @@
         <!-- Первая таблица -->
         <table class="table">
             <tr>
-                <th colspan="2" style="text-align: center;" >ст. м. Малиновка → Великий камень → ст. м. Малиновка</th>
+                <th colspan="2" style="text-align: center;border: solid 2px black;" >ст. м. Малиновка → Великий камень → ст. м. Малиновка</th>
             </tr>
-            <tr>
+            <tr style="border: solid 2px black;">
                 <th>Маршрут 2 <span style="float: right;">1 смена</span></th>
-                <th style="text-align: center;">Время</th>
+                <th style="text-align: center;border: solid 2px black;">Время</th>
             </tr>
             <tr>
                 <td class="green">1. ст. м. Малиновка</td>
