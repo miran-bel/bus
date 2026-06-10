@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <!-- https://miran-bel.github.io/bus/ -->
+    <!-- for example https://yandex.by/maps/?ll=27.686231%2C53.945332&pt=27.686208%2C53.945323&z=21 -->
 <head>
     <meta charset="UTF-8">
     <title>Расписание автобусов Миран</title>
     <style>
-        /* Стили для адаптивности */
+        /* ─── ОРИГИНАЛЬНЫЕ СТИЛИ (без изменений) ─── */
+        :root {
+            --bg: #f5f6f8;
+            --surface: #ffffff;
+            --border: #e2e5ea;
+            --header-bg: #1e293b;
+            --header-fg: #ffffff;
+            --sub-bg: #334155;
+            --green: #16a34a;
+            --red: #dc2626;
+            --pin: #2563eb;
+            --pin-miran: #aab601;
+            --pin-hover: #1d4ed8;
+            --pin-miran-hover: #6b7202;
+            --muted: #94a3b8;
+            --text: #1e293b;
+            --radius: 10px;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
         body {
             font-family: Arial, sans-serif;
             font-size: x-large;
@@ -22,7 +42,6 @@
             border-collapse: collapse;
             width: 100%;
             border: solid 2px black;
-            /* table-layout: auto;  Фиксированная ширина таблицы */
         }
 
         .table th, .table td {
@@ -38,17 +57,14 @@
 
         .green {
             background-color: #B7D7A9;
-            /* font-weight: bold; */
         }
 
         .red {
             background-color: #EAD1DC;
-            /* font-weight: bold; */
         }
 
         .yellow {
             background-color: #f0ed64;
-            /* font-weight: bold; */
         }
 
         .bold-text {
@@ -63,8 +79,10 @@
             background-color: red;
         }
 
-        .table td:nth-child(2) {
-            width: 120px;
+        /* Было: nth-child(2) = колонка времени.
+           Теперь после добавления колонки карты время стало 3-м дочерним элементом. */
+        .table td:nth-child(3) {
+            width: 100px;
         }
 
         .table tr th {
@@ -75,6 +93,63 @@
         @media (max-width: 550px) {
             .table-container {
                 flex-direction: column;
+            }
+        }
+
+        /* ─── СТИЛИ ДЛЯ КОЛОНКИ КООРДИНАТ ─── */
+
+        td.col-map, th.col-map {
+            width: 58px;          /* фиксированная узкая колонка */
+            min-width: 58px;
+            text-align: center !important;
+            padding: 4x 4px !important;
+            vertical-align: middle;
+        }
+
+        span.no-pin {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border);
+        }
+
+        a.pin-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            color: var(--pin-miran);
+            text-decoration: none;
+            transition: background 0.15s, color 0.15s;
+            /* увеличенная зона касания для телефона */
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        a.pin-link:hover,
+        a.pin-link:focus {
+            background: #f3f3f3;
+            color: var(--pin-miran-hover);
+            outline: none;
+        }
+
+        a.pin-link svg {
+            display: block;
+            width: 36px;   /* ← меняй здесь */
+            height: 36px;
+        }
+
+        /* на мобиле иконка чуть крупнее для удобного нажатия */
+        @media (max-width: 550px) {
+            a.pin-link {
+                width: 48px;
+                height: 48px;
+            }
+            a.pin-link svg {
+                width: 28px;
+                height: 28px;
             }
         }
     </style>
@@ -105,7 +180,7 @@
         
         <table class="table ">
             <tr>
-                <th colspan="2" style="text-align: center; ">ст.м. Каменная горка → Великий камень → ст. м. Могилевская</th>
+                <th colspan="3" style="text-align: center; ">ст.м. Каменная горка → Великий камень → ст. м. Могилевская</th>
             </tr>
             <tr>
                 <th>Маршрут 1 <span style="float: right;">1 смена</span></th>
@@ -765,7 +840,7 @@
                 <td class="bold-text">22:15</td>
             </tr>
         </table>
-         
+        
     </div>
     <div>
         <table style="display: flex; flex-wrap: wrap; margin-left: 10px;">
@@ -783,20 +858,44 @@
 
     <div class="table-container">
         <!-- Первая таблица -->
+        <!-- ст. м. Уручье → Великий камень -->
         <table class="table">
             <tr>
-                <th colspan="2" style="text-align: center;" >ст. м. Малиновка → Великий камень</th>
+                <th colspan="3" style="text-align: center;" >ст. м. Уручье → Великий камень</th>
             </tr>
             <tr>
                 <th>Маршрут 5 <span style="float: right;">1 смена</span></th>
+                <th class="col-map">Карта</th>
                 <th style="text-align: center;">Время</th>
             </tr>
             <tr>
                 <td class="green">1. ст. м. Уручье</td>
+                <td class="col-map">
+                    <a class="pin-link"
+                        href="https://yandex.by/maps/?ll=27.688812%2C53.945322&pt=27.688765%2C53.945313&z=21"
+                        target="_blank" rel="noopener" title="Открыть на карте">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                    </a>
+                </td>
                 <td class="bold-text">7:15</td>               
             </tr>
             <tr>
                 <td class="green">2. Прибытие в Великий камень.</td>
+                <td class="col-map">
+                    <a class="pin-link"
+                        href="https://yandex.by/maps/?ll=27.973462%2C53.902813&pt=27.973528%2C53.902810&z=21"
+                        target="_blank" rel="noopener" title="Открыть на карте">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                    </a>
+                </td>
                 <td class="bold-text">7:40</td>               
             </tr>
             <!-- <tr>
@@ -810,20 +909,44 @@
         </table>
 
         <!-- Вторая таблица -->
+        <!-- Великий камень → ст. м. Уручье -->
         <table class="table">
             <tr>
-                <th colspan="2" style="text-align: center;">Великий камень → ст. м. Уручье</th>
+                <th colspan="3" style="text-align: center;">Великий камень → ст. м. Уручье</th>
             </tr>
             <tr>
                 <th>Маршрут 5 <span style="float: right;">2 смена</span></th>
+                <th class="col-map">Карта</th>
                 <th style="text-align: center;">Время</th>
             </tr>
             <tr>
                 <td class="red">2. Отправление из Великого камня.</td>
+                <td class="col-map">
+                    <a class="pin-link"
+                        href="https://yandex.by/maps/?ll=27.973462%2C53.902813&pt=27.973528%2C53.902810&z=21"
+                        target="_blank" rel="noopener" title="Открыть на карте">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                    </a>
+                </td>
                 <td class="bold-text">16:15</td>               
             </tr>
             <tr>
                 <td class="red">1. ст. м. Уручье</td>
+                <td class="col-map">
+                    <a class="pin-link"
+                        href="https://yandex.by/maps/?ll=27.686231%2C53.945332&pt=27.686208%2C53.945323&z=21"
+                        target="_blank" rel="noopener" title="Открыть на карте">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                    </a>
+                </td>
                 <td class="bold-text">16:45</td>               
             </tr> 
             <!-- <tr>
