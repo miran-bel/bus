@@ -132,11 +132,24 @@
 				-webkit-tap-highlight-color: transparent;
 			}
 
-			a.pin-link:hover,
-			a.pin-link:focus-visible {
+			/* hover только там, где есть настоящая мышь (десктоп) */
+			@media (hover: hover) {
+				a.pin-link:hover {
+					background: #f3f3f3;
+					color: var(--pin-miran-hover);
+				}
+			}
+
+			/* тактильный отклик на телефоне — только пока держишь палец */
+			a.pin-link:active {
 				background: #f3f3f3;
 				color: var(--pin-miran-hover);
-				outline: none;
+			}
+
+			/* focus оставляем отдельно — для клавиатурной навигации */
+			a.pin-link:focus-visible {
+				outline: 2px solid var(--pin-miran);
+				outline-offset: 2px;
 			}
 
 			a.pin-link:visited {
